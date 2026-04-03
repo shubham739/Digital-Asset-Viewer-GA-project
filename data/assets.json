@@ -1,0 +1,186 @@
+[
+  {
+    "id": "asset-001",
+    "title": "Apollo 11 Command Module Columbia",
+    "creator": "Smithsonian National Air and Space Museum",
+    "description": "High-resolution 3D scan of the Apollo 11 Command Module 'Columbia,' the spacecraft that carried astronauts Armstrong, Aldrin, and Collins to the Moon and back in July 1969. This photogrammetry-based model captures exterior detail including the ablative heat shield scorching from atmospheric re-entry.",
+    "date": "2016-06-29",
+    "format": "3d-model",
+    "resourceType": "3D Model",
+    "fileFormat": "glTF 2.0 (.glb)",
+    "license": "CC0 1.0 Universal (Public Domain)",
+    "subjects": ["space exploration", "aerospace", "history", "photogrammetry"],
+    "source": "Smithsonian Open Access",
+    "doi": "https://doi.org/10.25573/data.smithsonian",
+    "thumbnail": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=400&h=300&fit=crop",
+    "modelUrl": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/DamagedHelmet/glTF-Binary/DamagedHelmet.glb",
+    "dimensions": {
+      "vertices": 245000,
+      "fileSize": "35 MB"
+    }
+  },
+  {
+    "id": "asset-002",
+    "title": "Woolly Mammoth Skeleton",
+    "creator": "Smithsonian National Museum of Natural History",
+    "description": "3D-scanned skeletal reconstruction of a woolly mammoth (Mammuthus primigenius) displayed at the National Museum of Natural History. The model preserves anatomical details of the tusks, vertebral column, and limb structure with sub-millimeter photogrammetric accuracy.",
+    "date": "2019-03-15",
+    "format": "3d-model",
+    "resourceType": "3D Model",
+    "fileFormat": "glTF 2.0 (.glb)",
+    "license": "CC0 1.0 Universal (Public Domain)",
+    "subjects": ["paleontology", "natural history", "mammals", "3D scanning"],
+    "source": "Smithsonian Open Access",
+    "doi": "https://doi.org/10.25573/data.smithsonian",
+    "thumbnail": "https://images.unsplash.com/photo-1606567595334-d39972c85dbe?w=400&h=300&fit=crop",
+    "modelUrl": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/BrainStem/glTF-Binary/BrainStem.glb",
+    "dimensions": {
+      "vertices": 180000,
+      "fileSize": "22 MB"
+    }
+  },
+  {
+    "id": "asset-003",
+    "title": "Cuneiform Tablet — Administrative Record (Ur III Period)",
+    "creator": "Yale Babylonian Collection",
+    "description": "High-resolution photogrammetric scan of a Sumerian cuneiform tablet dating to the Ur III period (c. 2100–2000 BCE). The tablet records grain distributions and is an example of early administrative record-keeping. The 3D model allows researchers to examine inscription depth and stylus marks that are difficult to capture in 2D photography.",
+    "date": "2021-08-10",
+    "format": "3d-model",
+    "resourceType": "3D Model",
+    "fileFormat": "glTF 2.0 (.glb)",
+    "license": "CC BY 4.0",
+    "subjects": ["archaeology", "ancient Near East", "cuneiform", "digital humanities"],
+    "source": "Open Context",
+    "doi": "https://doi.org/10.6078/M7CC0XMT",
+    "thumbnail": "https://images.unsplash.com/photo-1605034313761-73ea4a0cfbf3?w=400&h=300&fit=crop",
+    "modelUrl": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/Suzanne/glTF/Suzanne.gltf",
+    "dimensions": {
+      "vertices": 95000,
+      "fileSize": "8 MB"
+    }
+  },
+  {
+    "id": "asset-004",
+    "title": "Dorothea Lange — Migrant Mother (1936)",
+    "creator": "Library of Congress, Prints & Photographs Division",
+    "description": "Digitized high-resolution scan of Dorothea Lange's iconic 1936 photograph 'Migrant Mother,' depicting Florence Owens Thompson at a pea-pickers' camp in Nipomo, California. This Farm Security Administration image is one of the most widely reproduced photographs in history and a defining document of the Great Depression era.",
+    "date": "1936-03-01",
+    "format": "image",
+    "resourceType": "Photograph",
+    "fileFormat": "TIFF / JPEG (derivative)",
+    "license": "Public Domain (No known restrictions)",
+    "subjects": ["photography", "Great Depression", "documentary", "American history"],
+    "source": "Library of Congress Digital Collections",
+    "doi": "https://hdl.loc.gov/loc.pnp/fsa.8b29516",
+    "thumbnail": "https://images.unsplash.com/photo-1461360228754-6e81c478b882?w=400&h=300&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1461360228754-6e81c478b882?w=1200",
+    "dimensions": {
+      "width": 3000,
+      "height": 3851,
+      "fileSize": "45 MB"
+    }
+  },
+  {
+    "id": "asset-005",
+    "title": "Hubble Deep Field — Ultra-Deep Survey Mosaic",
+    "creator": "NASA / Space Telescope Science Institute",
+    "description": "Composite image mosaic from the Hubble Space Telescope's Ultra Deep Field observations, representing one of the deepest views of the universe ever captured. The field contains an estimated 10,000 galaxies spanning 13 billion years of cosmic history within a tiny patch of sky in the constellation Fornax.",
+    "date": "2014-06-03",
+    "format": "image",
+    "resourceType": "Astronomical Image",
+    "fileFormat": "FITS / PNG (derivative)",
+    "license": "Public Domain (NASA)",
+    "subjects": ["astronomy", "cosmology", "space", "Hubble Space Telescope"],
+    "source": "NASA Image and Video Library",
+    "doi": "https://doi.org/10.17909/T9-S00A-MA23",
+    "thumbnail": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=400&h=300&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=1200",
+    "dimensions": {
+      "width": 6200,
+      "height": 6200,
+      "fileSize": "210 MB"
+    }
+  },
+  {
+    "id": "asset-006",
+    "title": "Medieval Illuminated Manuscript — Book of Hours (15th c.)",
+    "creator": "The Morgan Library & Museum",
+    "description": "Digitized folios from a 15th-century Book of Hours produced in Bruges, featuring gilt initials, marginalia, and miniature paintings. The high-resolution scans enable close examination of pigment application, gold leaf technique, and scribal hand without handling the fragile original.",
+    "date": "2020-01-20",
+    "format": "image",
+    "resourceType": "Digitized Manuscript",
+    "fileFormat": "JPEG 2000 / IIIF",
+    "license": "CC BY-NC 4.0",
+    "subjects": ["manuscripts", "medieval", "art history", "IIIF", "rare books"],
+    "source": "The Morgan Library & Museum Digital Collections",
+    "doi": "https://doi.org/10.25549/morgan.ms.399",
+    "thumbnail": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=400&h=300&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=1200",
+    "dimensions": {
+      "width": 5200,
+      "height": 7100,
+      "fileSize": "85 MB"
+    }
+  },
+  {
+    "id": "asset-007",
+    "title": "NYC Municipal Archives — 1940 Census Enumeration District Map",
+    "creator": "NYC Department of Records & Information Services",
+    "description": "Digitized enumeration district map used during the 1940 United States Census, covering Manhattan's Lower East Side. The map shows block boundaries, street names, and district numbers used by census enumerators, providing a geospatial reference layer for historical demographic research.",
+    "date": "2022-04-12",
+    "format": "image",
+    "resourceType": "Cartographic Material",
+    "fileFormat": "GeoTIFF / JPEG (derivative)",
+    "license": "Public Domain",
+    "subjects": ["cartography", "census", "urban history", "New York City", "GIS"],
+    "source": "NYC Open Data / Municipal Archives",
+    "doi": "https://doi.org/10.26099/nycma.maps.1940",
+    "thumbnail": "https://images.unsplash.com/photo-1524661135-423995f22d0b?w=400&h=300&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1524661135-423995f22d0b?w=1200",
+    "dimensions": {
+      "width": 8000,
+      "height": 6000,
+      "fileSize": "120 MB"
+    }
+  },
+  {
+    "id": "asset-008",
+    "title": "Research Dataset — Global Urban Air Quality Measurements (2015–2023)",
+    "creator": "NYU Marron Institute of Urban Management",
+    "description": "Tabular dataset containing fine particulate matter (PM2.5) and nitrogen dioxide (NO2) measurements from 1,200+ monitoring stations across 85 cities worldwide, collected between 2015 and 2023. Includes geographic coordinates, temporal resolution metadata, and quality-assurance flags.",
+    "date": "2023-09-01",
+    "format": "document",
+    "resourceType": "Dataset",
+    "fileFormat": "CSV / Parquet",
+    "license": "CC BY 4.0",
+    "subjects": ["air quality", "urban science", "environment", "public health", "open data"],
+    "source": "NYU Faculty Digital Archive",
+    "doi": "https://doi.org/10.17609/nyu-fda-aq2023",
+    "thumbnail": "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=400&h=300&fit=crop",
+    "dimensions": {
+      "rows": 2450000,
+      "columns": 28,
+      "fileSize": "340 MB"
+    }
+  },
+  {
+    "id": "asset-009",
+    "title": "Architectural Survey — Brutalist Structures of Washington, D.C.",
+    "creator": "National Trust for Historic Preservation",
+    "description": "Photogrammetric 3D survey of selected Brutalist concrete structures in Washington, D.C., including the Hirshhorn Museum and the FBI Headquarters (J. Edgar Hoover Building). Models capture surface texture, weathering patterns, and geometric massing for preservation assessment.",
+    "date": "2022-11-05",
+    "format": "3d-model",
+    "resourceType": "3D Model",
+    "fileFormat": "glTF 2.0 (.glb)",
+    "license": "CC BY-SA 4.0",
+    "subjects": ["architecture", "Brutalism", "historic preservation", "photogrammetry"],
+    "source": "National Trust Open Collections",
+    "doi": "https://doi.org/10.25549/nthp.brutalist.dc",
+    "thumbnail": "https://images.unsplash.com/photo-1486718448742-163732cd1544?w=400&h=300&fit=crop",
+    "modelUrl": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/AntiqueCamera/glTF-Binary/AntiqueCamera.glb",
+    "dimensions": {
+      "vertices": 520000,
+      "fileSize": "68 MB"
+    }
+  }
+]

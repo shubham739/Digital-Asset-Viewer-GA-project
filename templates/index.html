@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Asset Viewer — Research Data Explorer</title>
+  <meta name="description" content="A prototype interface for browsing and displaying research digital assets including 3D models, images, and datasets." />
+  <link rel="stylesheet" href="/static/css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+          <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+          <line x1="12" y1="22.08" x2="12" y2="12"/>
+        </svg>
+        <h1>Digital Asset Viewer</h1>
+      </div>
+    </div>
+  </header>
+
+  <section class="toolbar" role="search" aria-label="Search and filter assets">
+    <div class="toolbar-inner">
+      <div class="search-box">
+        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search by title, creator, or keyword…"
+          aria-label="Search assets"
+          autocomplete="off"
+        />
+        <button id="clear-search" class="clear-btn" aria-label="Clear search" hidden>&times;</button>
+      </div>
+
+      <div class="filter-group">
+        <label for="format-filter">Format:</label>
+        <select id="format-filter" aria-label="Filter by format">
+          <option value="">All Formats</option>
+        </select>
+
+        <label for="sort-select">Sort:</label>
+        <select id="sort-select" aria-label="Sort results">
+          <option value="date-desc">Newest First</option>
+          <option value="date-asc">Oldest First</option>
+          <option value="title-asc">Title A–Z</option>
+          <option value="title-desc">Title Z–A</option>
+        </select>
+      </div>
+
+      <div class="results-count" id="results-count" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <main>
+    <div id="gallery" class="gallery" role="list" aria-label="Asset gallery"></div>
+    <div id="loading" class="loading" aria-live="polite">
+      <div class="spinner"></div>
+      <p>Loading assets…</p>
+    </div>
+    <div id="empty-state" class="empty-state" hidden>
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        <line x1="8" y1="11" x2="14" y2="11"/>
+      </svg>
+      <p>No assets match your search.</p>
+    </div>
+  </main>
+
+  <div id="detail-modal" class="modal-overlay" hidden aria-modal="true" role="dialog" aria-label="Asset detail view">
+    <div class="modal">
+      <button class="modal-close" id="modal-close" aria-label="Close detail view">&times;</button>
+
+      <div class="modal-body">
+        <!-- Left: Viewer pane (3D / image) -->
+        <div class="viewer-pane" id="viewer-pane">
+          <div id="viewer-3d" class="viewer-3d" hidden></div>
+          <img id="viewer-image" class="viewer-image" alt="" hidden />
+          <div id="viewer-document" class="viewer-document" hidden>
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+            <p>Dataset / Document Asset</p>
+          </div>
+          <div class="viewer-controls" id="viewer-controls" hidden>
+            <span class="control-hint">Click &amp; drag to rotate · Scroll to zoom</span>
+          </div>
+        </div>
+
+        <!-- Right: Metadata panel -->
+        <div class="metadata-panel">
+          <span class="badge" id="detail-format"></span>
+          <h2 id="detail-title"></h2>
+          <p class="detail-creator" id="detail-creator"></p>
+
+          <div class="metadata-section">
+            <h3>Description</h3>
+            <p id="detail-description"></p>
+          </div>
+
+          <div class="metadata-grid">
+            <div class="meta-item">
+              <span class="meta-label">Date</span>
+              <span class="meta-value" id="detail-date"></span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Resource Type</span>
+              <span class="meta-value" id="detail-resource-type"></span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">File Format</span>
+              <span class="meta-value" id="detail-file-format"></span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">License</span>
+              <span class="meta-value" id="detail-license"></span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Source</span>
+              <span class="meta-value" id="detail-source"></span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">DOI / Identifier</span>
+              <a class="meta-value meta-link" id="detail-doi" href="#" target="_blank" rel="noopener"></a>
+            </div>
+          </div>
+
+          <div class="metadata-section" id="subjects-section">
+            <h3>Subjects</h3>
+            <div class="tags" id="detail-subjects"></div>
+          </div>
+
+          <div class="metadata-section" id="dimensions-section">
+            <h3>Dimensions</h3>
+            <div id="detail-dimensions" class="dimensions-grid"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>Digital Asset Viewer — Open Source Prototype · Built with HTML, CSS, JavaScript &amp; Flask</p>
+    <p>Metadata schema aligned with <a href="https://datacite.org" target="_blank" rel="noopener">DataCite</a> standards</p>
+  </footer>
+
+  <!-- Three.js from CDN (for 3D model rendering) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Application scripts (vanilla JS, no frameworks) -->
+  <script src="/static/js/viewer3d.js"></script>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
